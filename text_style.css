@@ -1,0 +1,29 @@
+.jost {
+           font-family: "Jost", sans-serif;
+           font-optical-sizing: auto;
+           font-style: normal;
+       }
+h1 {
+    font-family: "Jost", sans-serif;
+    color: white;
+    font-size: 64px;
+    margin: 0 0;
+}
+h2 {
+    font-family: "Jost", sans-serif;
+    color: white;
+    font-size: 30px;
+    padding: 0 0;
+}
+p {
+    font-family: "Jost", sans-serif;
+    color: white;
+    margin: 0 0;
+    padding: 10px 0;
+    font-size: 20px;
+}
+nav ul a {
+    font-family: "Jost", sans-serif;
+    color: white;
+    font-size: 20px;
+}

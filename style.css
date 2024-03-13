@@ -1,0 +1,309 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#invisibleObject {
+    position: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
+
+/*Header*/
+/*Navigation Bar*/
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #141024;
+    height: 950px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+nav li {
+    padding: 0 1vw;
+}
+nav ul,
+.modal ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav a,
+.modal a {
+    color: black;
+    font-size: 20px;
+    display: flex;
+    text-decoration: none;
+    border: none;
+}
+nav ul{
+    padding: 0 1vw;
+}
+
+.modal ul{
+    flex-direction: column;
+}
+
+
+.menu {
+    display: none;
+}
+
+/*Main Banner*/
+.main_banner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 5vw;
+    overflow: hidden;
+}
+
+.banner_text {
+    width: 60%;
+}
+
+.banner_img {
+    width: 40%;
+    height: 100%;
+    background: url("bannerImage.png") no-repeat right;
+    background-size: contain;
+    padding-left: 20px;
+    padding-right: 5vw;
+}
+
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+/*Кнопка*/
+.center {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+
+}
+
+.btn {
+    position: absolute;
+    margin-top: 10px;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: #ff4b4b;
+    border-radius: 5px;
+    border: 1px solid #fd4141;
+    outline: none;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+}
+
+svg {
+    width: 98%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    border-radius: 5px;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+    background: #ff0000;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -600;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        position: initial;
+        display: block;
+        width: 30px;
+    }
+
+    .navigation_bar,
+    .phone_text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 801px) {
+
+}
+
+@media screen and (max-width: 800px) {
+    .btn:hover svg {
+        display: none;
+    }
+    .main_banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner_text {
+        justify-content: flex-start;
+
+        height: 30%;
+        width: auto;
+    }
+    .banner_img {
+        background: url("bannerImage.png") no-repeat bottom;
+        background-size: contain;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .center {
+        bottom: 30px;
+        width: 100%;
+        left: 50%;
+        transform: translate(-40%);
+    }
+    .btn {
+        width: 80%;
+    }
+
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    p {
+        font-size: 15px;
+        margin: 5px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+}
+
+/*Main*/
+main {
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #141024;
+    height: 160px;
+}
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.other {
+    padding-bottom: 20px ;
+}
+/*  # Свойства модальных окон */
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.8s ease 0s;
+}
+
+.content {
+    border-radius: 30px;
+    background-color: white;
+    padding: 30px;
+    max-width: 800px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal:target .content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+/*  # Модальное окно 1 */
+.orderACall_body {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.content {
+    border-radius: 30px;
+    background-color: white;
+    padding: 30px;
+    max-width: 800px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    overflow: hidden;
+}
+.content p {
+    color: black;
+}
+
+.modal_Close {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    opacity: 30%;
+}
+
+/*  # Модальное окно 2 */
+.navigationMenu_body {
+    display: flex;
+    min-height: 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.navigationMenu_body .content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 0 30px;
+}
+
+.navigationButtonMenu {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 1vh 0;
+}
