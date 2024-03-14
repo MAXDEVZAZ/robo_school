@@ -30,15 +30,18 @@ nav {
     align-items: center;
     padding: 0 5vw;
 }
+
 nav li {
     padding: 0 1vw;
 }
+
 nav ul,
-.modal ul{
+.modal ul {
     display: flex;
     list-style-type: none;
     padding: 0;
 }
+
 nav a,
 .modal a {
     color: black;
@@ -47,11 +50,12 @@ nav a,
     text-decoration: none;
     border: none;
 }
-nav ul{
+
+nav ul {
     padding: 0 1vw;
 }
 
-.modal ul{
+.modal ul {
     flex-direction: column;
 }
 
@@ -155,45 +159,47 @@ svg {
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 801px) {
-
-}
 
 @media screen and (max-width: 800px) {
     .btn:hover svg {
         display: none;
     }
+
     .main_banner {
         flex-direction: column;
         align-items: center;
     }
+
     .banner_text {
         justify-content: flex-start;
 
         height: 30%;
         width: auto;
     }
+
     .banner_img {
         background: url("bannerImage.png") no-repeat bottom;
         background-size: contain;
         margin-bottom: 30px;
         width: 100%;
     }
+
     .center {
         bottom: 30px;
         width: 100%;
         left: 50%;
         transform: translate(-40%);
     }
+
     .btn {
         width: 80%;
     }
 
 
-    h1 {
-        font-size: 50px;
+    .logo_text {
         text-align: center;
     }
+
     p {
         font-size: 15px;
         margin: 5px;
@@ -206,7 +212,80 @@ svg {
 /*Main*/
 main {
     flex-grow: 1;
+    padding: 0 10vw;
+
 }
+
+.text_about_company {
+    color: black;
+    font-style: normal;
+    font-family: "Jost", sans-serif;
+    text-align: center;
+}
+
+.aboutOfCompany {
+    height: 1000px;
+    padding: 40px 0;
+    background-color: white;
+}
+
+.container_text_cards {
+    display: grid;
+    place-items: center;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 699px) {
+    .container_text_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1299px) {
+    .container_text_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*@media screen and (min-width: 1000px) and (max-width: 1299px) {*/
+/*    .container_text_cards {*/
+/*        grid-template-columns: repeat(3, 1fr);*/
+/*    }*/
+/*}*/
+
+@media screen and (min-width: 1300px) {
+    .container_text_cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.text_card_h {
+    color: red;
+    text-align: center;
+}
+
+.text_card_pl {
+    color: black;
+}
+
+.text_card {
+    height: 170px;
+    width: 260px;
+    padding: 0 5px;
+    text-align: center;
+
+}
+
+.teachers {
+    height: 1000px;
+    background-color: green;
+}
+
+.priceTag {
+    height: 800px;
+    background-color: blue;
+}
+
 
 footer {
     display: flex;
@@ -214,14 +293,32 @@ footer {
     background-color: #141024;
     height: 160px;
 }
+
 .footer_nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    height: 50%;
     margin: 0;
+    padding: 0 5vw;
 }
+
+.footer_nav h2 {
+
+    font-size: 25px;
+}
+
+pl {
+    color: white;
+    font-size: 18px;
+}
+
 .other {
-    padding-bottom: 20px ;
+    height: 50%;
+    padding: 0 5vw 20px;
 }
+
+
 /*  # Свойства модальных окон */
 .modal {
     position: fixed;
@@ -276,6 +373,7 @@ footer {
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
     overflow: hidden;
 }
+
 .content p {
     color: black;
 }
